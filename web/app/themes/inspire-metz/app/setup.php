@@ -177,6 +177,30 @@ add_filter('inspire_metz/form_recipients', function ($recipients, $form) {
 }, 10, 2);
 
 /**
+ * Favicons de l'agence (mêmes fichiers que le site en ligne). Une icône définie
+ * dans Réglages → Général (« Icône du site ») reste prioritaire.
+ *
+ * @return void
+ */
+$favicons = function () {
+    if (has_site_icon()) {
+        return;
+    }
+
+    $icon = fn ($size) => Vite::asset("resources/images/favicon/favicon-{$size}.png");
+
+    printf('<link rel="icon" href="%s" sizes="32x32">'."\n", esc_url($icon('32x32')));
+    printf('<link rel="icon" href="%s" sizes="192x192">'."\n", esc_url($icon('192x192')));
+    printf('<link rel="apple-touch-icon" href="%s">'."\n", esc_url($icon('180x180')));
+    printf('<meta name="msapplication-TileImage" content="%s">'."\n", esc_url($icon('270x270')));
+    echo '<meta name="theme-color" content="#001231">'."\n";
+};
+
+add_action('wp_head', $favicons, 2);
+add_action('login_head', $favicons);
+add_action('admin_head', $favicons);
+
+/**
  * Register the theme sidebars.
  *
  * @return void
