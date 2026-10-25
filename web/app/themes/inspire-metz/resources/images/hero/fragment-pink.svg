@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24.873" height="18.005" viewBox="0 0 24.873 18.005">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.029" y1="0.952" x2="0.769" y2="0.071" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffdeed"/>
+      <stop offset="1" stop-color="#ffdeed" stop-opacity="0.322"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.384" y1="0.694" x2="0.028" y2="-0.293" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="fragments" transform="translate(-10.959 -3.934) rotate(-17)">
+    <path id="Path_213" data-name="Path 213" d="M-20424.262-20026.49l-5.314,10.539,22.336,1.461Z" transform="translate(20436.998 20039.701)" fill="#ee689f"/>
+    <path id="Path_215" data-name="Path 215" d="M-20424.264-20022.574l-5.316,10.535,6.986-6.184Z" transform="translate(20437.002 20035.785)" opacity="0.8" fill="url(#linear-gradient)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+    <path id="Path_216" data-name="Path 216" d="M-20415.34-20026.492l17.021,12-15.354-7.645Z" transform="translate(20428.076 20039.703)" opacity="0.8" fill="url(#linear-gradient-2)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+  </g>
+</svg>

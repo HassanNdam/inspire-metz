@@ -1,0 +1,195 @@
+/*
+|--------------------------------------------------------------------------
+| Boutons et liens — maquette p. 3 « Interactions »
+|--------------------------------------------------------------------------
+| Variantes : primary (cyan), secondary (bleu nuit), tertiary (contour),
+| light (primary sur fond sombre). Tailles : sm 15px, md 18px, lg 22px.
+*/
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.9375rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: -0.016em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 200ms var(--ease-out-soft),
+    border-color 200ms var(--ease-out-soft),
+    box-shadow 200ms var(--ease-out-soft),
+    color 200ms var(--ease-out-soft);
+
+  & svg {
+    width: 1.15em;
+    height: 1.15em;
+    flex-shrink: 0;
+    transition: translate 200ms var(--ease-out-soft);
+  }
+
+  &:hover svg {
+    translate: 0.15em 0;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+@utility btn-sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.8125rem;
+}
+
+/* 18px : « Voir tout », « S'inscrire » du pied de page… */
+@utility btn-lg {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+
+@utility btn-primary {
+  background-color: var(--color-action);
+  color: var(--color-ink);
+
+  &:hover {
+    background-color: var(--color-action-hover);
+    border-color: rgb(255 255 255 / 0.35);
+    box-shadow: inset 0 0 0.75rem rgb(255 255 255 / 0.35);
+  }
+}
+
+@utility btn-secondary {
+  background-color: var(--color-dark-blue-950);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-dark-blue-800);
+    border-color: rgb(171 202 234 / 0.45);
+    box-shadow: inset 0 0 0.75rem rgb(117 164 230 / 0.35);
+  }
+}
+
+@utility btn-tertiary {
+  background-color: var(--color-white);
+  border-color: var(--color-slate-300);
+  color: var(--color-ink);
+
+  &:hover {
+    background-color: var(--color-slate-100);
+  }
+}
+
+/* Primary « onDark » */
+@utility btn-light {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+
+  &:hover {
+    background-color: var(--color-slate-400);
+    border-color: rgb(255 255 255 / 0.4);
+  }
+}
+
+/* Lien fléché */
+@utility link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: color 200ms var(--ease-out-soft);
+
+  & svg {
+    width: 0.875em;
+    height: 0.875em;
+    flex-shrink: 0;
+    color: var(--color-cyan-500);
+    transition: translate 200ms var(--ease-out-soft);
+  }
+
+  &:hover {
+    color: var(--color-slate-500);
+  }
+
+  &:hover svg {
+    translate: 0.15em 0;
+  }
+}
+
+@utility link-arrow-light {
+  color: var(--color-white);
+
+  & svg {
+    color: var(--color-cyan-300);
+  }
+
+  &:hover {
+    color: var(--color-slate-300);
+  }
+}
+
+/* Bouton icône carré (burger, fermer, réseaux sociaux…) */
+@utility btn-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.125rem;
+  background-color: rgb(255 255 255 / 0.12);
+  color: var(--color-white);
+  transition: background-color 200ms var(--ease-out-soft);
+
+  & svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    background-color: rgb(255 255 255 / 0.22);
+  }
+}
+
+@utility btn-social {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--color-cyan-400);
+  border-radius: 9999px;
+  color: var(--color-cyan-300);
+  transition:
+    background-color 200ms var(--ease-out-soft),
+    color 200ms var(--ease-out-soft);
+
+  & svg {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  &:hover {
+    background-color: var(--color-cyan-400);
+    color: var(--color-ink);
+  }
+}
+
+/* Contour gris (« Voir tout » des actualités) */
+@utility btn-outline {
+  border-color: var(--color-slate-300);
+  background-color: var(--color-white);
+  color: var(--color-slate-600);
+
+  &:hover {
+    border-color: var(--color-slate-400);
+    color: var(--color-ink);
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="646.219" height="422.271" viewBox="0 0 646.219 422.271">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.306" y1="0.177" x2="0.08" y2="0.578" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d3f5fa"/>
+      <stop offset="1" stop-color="#d3f5fa" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="reflection-left">
+      <feOffset dx="-2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#eefcfd" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.133" y1="1.054" x2="0.342" y2="0.106" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.148" y1="0.991" x2="0.246" y2="0.653" xlink:href="#linear-gradient"/>
+    <filter id="reflection-right">
+      <feOffset dx="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#eefcfd" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-4" x1="0.359" y1="0.276" x2="0.673" y2="0.631" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d3f5fa" stop-opacity="0.565"/>
+      <stop offset="1" stop-color="#d3f5fa" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="reflections" transform="translate(-531.191 -742.924)" opacity="0.64">
+    <g data-type="innerShadowGroup">
+      <path id="reflection-left-2" data-name="reflection-left" d="M651.535,887.8l-29.86,320.32,189.86-110.26Z" transform="translate(-90.484 -42.92)" fill="url(#linear-gradient)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+      <g transform="matrix(1, 0, 0, 1, 531.19, 742.92)" filter="url(#reflection-left)" style="mix-blend-mode: hard-light;isolation: isolate">
+        <path id="reflection-left-3" data-name="reflection-left" d="M651.535,887.8l-29.86,320.32,189.86-110.26Z" transform="translate(-621.68 -785.84)" fill="#fff"/>
+      </g>
+    </g>
+    <path id="reflection-bottom" d="M1267.9,1136.875l-646.215,71.24,189.855-110.26Z" transform="translate(-90.484 -42.92)" fill="url(#linear-gradient-2)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+    <g data-type="innerShadowGroup">
+      <path id="reflection-right-2" data-name="reflection-right" d="M1267.9,1136.875,1002.013,785.844,811.535,1097.855Z" transform="translate(-90.484 -42.92)" fill="url(#linear-gradient-3)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+      <g transform="matrix(1, 0, 0, 1, 531.19, 742.92)" filter="url(#reflection-right)" style="mix-blend-mode: hard-light;isolation: isolate">
+        <path id="reflection-right-3" data-name="reflection-right" d="M1267.9,1136.875,1002.013,785.844,811.535,1097.855Z" transform="translate(-621.68 -785.84)" fill="#fff"/>
+      </g>
+    </g>
+    <path id="reflection-top" d="M651.535,887.8l350.478-101.952L811.535,1097.855Z" transform="translate(-90.484 -42.92)" fill="url(#linear-gradient-4)" style="mix-blend-mode: hard-light;isolation: isolate"/>
+  </g>
+</svg>

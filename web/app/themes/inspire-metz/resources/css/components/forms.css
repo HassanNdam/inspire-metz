@@ -1,0 +1,130 @@
+/*
+|--------------------------------------------------------------------------
+| Formulaires — maquette p. 4 « Forms »
+|--------------------------------------------------------------------------
+*/
+
+@utility field-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-slate-700);
+
+  & .field-optional {
+    color: var(--color-slate-400);
+  }
+}
+
+@utility field-control {
+  display: block;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-slate-300);
+  border-radius: 0.125rem;
+  background-color: var(--color-white);
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: var(--color-slate-700);
+  transition: border-color 150ms var(--ease-out-soft);
+
+  &::placeholder {
+    color: var(--color-slate-500);
+  }
+
+  &:hover {
+    border-color: var(--color-slate-400);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-slate-700);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--color-error);
+    color: var(--color-error);
+  }
+}
+
+@utility field-select {
+  appearance: none;
+  padding-right: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23334155' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+
+  &:has(option[value=""]:checked) {
+    color: var(--color-slate-500);
+  }
+}
+
+@utility field-textarea {
+  min-height: 11rem;
+  resize: vertical;
+}
+
+@utility field-error {
+  margin-top: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--color-error);
+}
+
+/* Case à cocher / bouton radio */
+@utility field-choice {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 1rem;
+  color: var(--color-slate-700);
+  cursor: pointer;
+
+  & input {
+    appearance: none;
+    flex-shrink: 0;
+    width: 1.0625rem;
+    height: 1.0625rem;
+    margin-top: 0.2rem;
+    border: 1px solid var(--color-slate-300);
+    background-color: var(--color-white);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition:
+      background-color 150ms var(--ease-out-soft),
+      border-color 150ms var(--ease-out-soft);
+  }
+
+  & input[type="checkbox"] {
+    border-radius: 0.125rem;
+  }
+
+  & input[type="radio"] {
+    border-radius: 9999px;
+  }
+
+  & input:hover {
+    border-color: var(--color-cyan-500);
+  }
+
+  & input[type="checkbox"]:checked {
+    border-color: var(--color-cyan-500);
+    background-color: var(--color-cyan-500);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 8.5 2.5 2.5L12 5.5'/%3E%3C/svg%3E");
+    background-size: 0.875rem;
+  }
+
+  & input[type="radio"]:checked {
+    border-color: var(--color-cyan-500);
+    background-image: radial-gradient(circle, var(--color-cyan-500) 0 45%, transparent 50%);
+  }
+}
+
+/* Variante sur fond sombre (modale newsletter claire = défaut, footer = sombre) */
+@utility field-on-dark {
+  & .field-label,
+  & .field-choice {
+    color: var(--color-white);
+  }
+}

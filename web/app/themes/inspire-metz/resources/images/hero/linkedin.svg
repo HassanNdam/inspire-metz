@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Ellipse_2">
+      <feOffset dx="1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#73d7ed" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="LinkedIn" transform="translate(-1824 -991)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 1824, 991)" filter="url(#Ellipse_2)">
+        <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="24" cy="24" r="24" fill="#fff"/>
+      </g>
+      <g id="Ellipse_2-3" data-name="Ellipse 2" transform="translate(1824 991)" fill="none" stroke="rgba(115,215,237,0.4)" stroke-width="1">
+        <circle cx="24" cy="24" r="24" stroke="none"/>
+        <circle cx="24" cy="24" r="23.5" fill="none"/>
+      </g>
+    </g>
+    <g id="social-linkedin" transform="translate(77 56)">
+      <rect id="Rectangle_30" data-name="Rectangle 30" width="32" height="32" transform="translate(1755 943)" fill="#69e4ff" opacity="0"/>
+      <path id="Tracé_60" data-name="Tracé 60" d="M5.438,2.821A2.643,2.643,0,1,1,2.8,5.464,2.643,2.643,0,0,1,5.438,2.821" transform="translate(1757.075 945.082)" fill="#69e4ff"/>
+      <path id="Tracé_61" data-name="Tracé 61" d="M10.513,8.917V23.578h4.552v-7.25c0-1.913.36-3.766,2.732-3.766,2.339,0,2.368,2.187,2.368,3.886v7.13H24.72v-8.04c0-3.949-.85-6.984-5.466-6.984a4.786,4.786,0,0,0-4.309,2.367h-.062v-2Zm-7.418,0H7.654V23.578H3.1Z" transform="translate(1757.137 946.273)" fill="#69e4ff"/>
+    </g>
+  </g>
+</svg>

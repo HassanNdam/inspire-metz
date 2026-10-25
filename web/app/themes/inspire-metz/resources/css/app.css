@@ -1,0 +1,197 @@
+@import "tailwindcss" theme(static);
+@import "@fontsource/poppins/latin-300.css";
+@import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-700.css";
+
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+/*
+|--------------------------------------------------------------------------
+| Design tokens — Inspire Metz
+|--------------------------------------------------------------------------
+| Valeurs relevées dans la maquette (« Inspire METZ site.pdf », p. 1 à 5).
+| Échelle typographique fluide : mobile 374px → desktop 1920px.
+*/
+
+@theme static {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Dark Blue */
+  --color-dark-blue-50: #f4faff;
+  --color-dark-blue-100: #eaf3fa;
+  --color-dark-blue-200: #d7e9f8;
+  --color-dark-blue-300: #abcaea;
+  --color-dark-blue-400: #75a4e6;
+  --color-dark-blue-500: #5174c9;
+  --color-dark-blue-600: #2e509f;
+  --color-dark-blue-700: #143471;
+  --color-dark-blue-800: #082960;
+  --color-dark-blue-900: #001e50;
+  --color-dark-blue-950: #001231;
+
+  /* Cyan (remplace le cyan Tailwind) */
+  --color-cyan-50: #eefcfd;
+  --color-cyan-100: #d3f5fa;
+  --color-cyan-200: #ace8f5;
+  --color-cyan-300: #73d7ed;
+  --color-cyan-400: #52c6e2;
+  --color-cyan-500: #179fc3;
+  --color-cyan-600: #167fa4;
+  --color-cyan-700: #196785;
+  --color-cyan-800: #1d556d;
+  --color-cyan-900: #1c475d;
+  --color-cyan-950: #0d2e3f;
+
+  /* Grayscale = slate Tailwind, sauf le 950 */
+  --color-slate-950: #030712;
+
+  /* Couleurs des services */
+  --color-meeting-you-300: #f7aacc;
+  --color-meeting-you-400: #ee689f;
+  --color-meeting-you-500: #e64080;
+  --color-meeting-you-700: #ba1c4d;
+  --color-meeting-you-800: #991b40;
+
+  --color-invest-in-300: #f7be7a;
+  --color-invest-in-400: #f4792c;
+  --color-invest-in-500: #ec6423;
+  --color-invest-in-700: #ba4b14;
+  --color-invest-in-800: #943b18;
+
+  --color-tourisme-300: #f5b07c;
+  --color-tourisme-400: #ef7c39;
+  --color-tourisme-500: #ec6423;
+  --color-tourisme-700: #b83816;
+  --color-tourisme-800: #922e1a;
+
+  /* Libellés des missions (bloc « Nos missions ») */
+  --color-mission-visiter: #93c243;
+  --color-mission-organiser: var(--color-meeting-you-400);
+  --color-mission-investir: var(--color-invest-in-400);
+
+  /* Interactions */
+  --color-action: #69e4ff;
+  --color-action-hover: var(--color-cyan-400);
+  --color-ink: var(--color-dark-blue-950);
+  --color-error: #dc2626;
+
+  /*
+   * Typographie : valeurs de la maquette mobile (374px) puis desktop (1920px),
+   * en rem. Le rem lui-même suit la largeur d'écran (voir html plus bas),
+   * comme sur le site en ligne : 1rem = 16px à 390px et à 1920px.
+   */
+  --text-display: var(--fs-display);
+  --text-display--line-height: 1.05;
+  --text-h1: var(--fs-h1);
+  --text-h1--line-height: 1.02;
+  --text-section: var(--fs-section);
+  --text-section--line-height: 1.05;
+  --text-h2: var(--fs-h2);
+  --text-h2--line-height: 1.05;
+  --text-title: var(--fs-title);
+  --text-title--line-height: 1.05;
+  --text-h3: var(--fs-h3);
+  --text-h3--line-height: 1.1;
+  --text-quote: var(--fs-quote);
+  --text-quote--line-height: 1.4;
+  --text-stat: var(--fs-stat);
+  --text-stat--line-height: 1.1;
+  --text-lead-lg: var(--fs-lead-lg);
+  --text-lead-lg--line-height: 1.18;
+  --text-card: var(--fs-card);
+  --text-card--line-height: 1.1;
+  --text-lead: var(--fs-lead);
+  --text-lead--line-height: 1.5;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-prose: var(--fs-prose);
+  --text-prose--line-height: 1.555;
+
+  /* Largeurs de mise en page */
+  --container-prose: 58rem;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+|--------------------------------------------------------------------------
+| Base
+|--------------------------------------------------------------------------
+*/
+
+:root {
+  --fs-display: 2.0625rem;
+  --fs-h1: 2.0625rem;
+  --fs-section: 2rem;
+  --fs-h2: 2rem;
+  --fs-title: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-quote: 1.25rem;
+  --fs-stat: 2.5rem;
+  --fs-lead-lg: 1.375rem;
+  --fs-card: 1.375rem;
+  --fs-lead: 1rem;
+  --fs-prose: 1rem;
+
+  @media (width >= 64rem) {
+    --fs-display: 4rem;
+    --fs-h1: 4.5rem;
+    --fs-section: 4rem;
+    --fs-h2: 3rem;
+    --fs-title: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-quote: 2rem;
+    --fs-stat: 3.5rem;
+    --fs-lead-lg: 1.75rem;
+    --fs-card: 1.875rem;
+    --fs-lead: 1.25rem;
+    --fs-prose: 1.125rem;
+  }
+}
+
+@layer base {
+  /*
+   * rem proportionnel à l'écran (même règle que le site en ligne) : toute la
+   * maquette se met à l'échelle. Plafonné sur tablette, où la règle d'origine
+   * grossissait trop (24px de rem à 768px).
+   */
+  html {
+    @apply scroll-smooth antialiased;
+    font-size: min(calc(7.13636px + 2.27273vw), 18px);
+
+    @media (width >= 64rem) {
+      font-size: 0.83247vw;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-body text-slate-700;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-medium text-ink text-balance;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cyan-500;
+  }
+
+  ::selection {
+    @apply bg-cyan-200 text-ink;
+  }
+
+  [x-cloak] {
+    display: none !important;
+  }
+}
+
+@import "./components/layout.css";
+@import "./components/buttons.css";
+@import "./components/forms.css";
+@import "./components/shapes.css";
+@import "./components/prose.css";
+@import "./components/site.css";

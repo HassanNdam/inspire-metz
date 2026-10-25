@@ -1,0 +1,115 @@
+/*
+|--------------------------------------------------------------------------
+| Contenu éditorial (WYSIWYG) — maquette p. 9 « page de contenu »
+|--------------------------------------------------------------------------
+*/
+
+@utility prose-inspire {
+  font-size: var(--text-prose);
+  line-height: var(--text-prose--line-height);
+  color: var(--color-ink);
+
+  & > * + * {
+    margin-top: 1.25rem;
+  }
+
+  /* Titres de contenu en Light, comme sur le site en ligne. */
+  & h2 {
+    margin-top: 4.75rem;
+    margin-bottom: 1.5rem;
+    font-size: var(--text-h2);
+    font-weight: 300;
+    line-height: 1.04;
+  }
+
+  & h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+  }
+
+  & h2:first-child,
+  & h3:first-child {
+    margin-top: 0;
+  }
+
+  & a {
+    font-weight: 600;
+    color: var(--color-cyan-500);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+
+  & strong {
+    font-weight: 600;
+  }
+
+  & ul,
+  & ol {
+    display: grid;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  & ul {
+    list-style: none;
+  }
+
+  & ul > li {
+    position: relative;
+  }
+
+  /* Puce « fanion » cyan de la maquette */
+  & ul > li::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0.65em;
+    width: 0.625rem;
+    height: 0.3125rem;
+    background-color: var(--color-dark-blue-300);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  }
+
+  & ol {
+    list-style: decimal;
+  }
+
+  & ol > li::marker {
+    font-weight: 600;
+    color: var(--color-dark-blue-300);
+  }
+
+  & blockquote {
+    font-size: var(--text-quote);
+    line-height: var(--text-quote--line-height);
+    color: var(--color-ink);
+    text-align: center;
+  }
+}
+
+@utility prose-on-dark {
+  color: var(--color-white);
+
+  & h2,
+  & h3 {
+    color: var(--color-white);
+  }
+
+  & a {
+    color: var(--color-cyan-300);
+  }
+}
+
+/* Corps d'article : les blocs s'alignent sur la colonne centrée. */
+@utility article-body {
+  & .container-text,
+  & .container-content {
+    padding-inline: 0;
+  }
+}

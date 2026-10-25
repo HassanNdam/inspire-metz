@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Ellipse_2">
+      <feOffset dx="1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#73d7ed" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Facebook" transform="translate(-1824 -991)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 1824, 991)" filter="url(#Ellipse_2)">
+        <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="24" cy="24" r="24" fill="#fff"/>
+      </g>
+      <g id="Ellipse_2-3" data-name="Ellipse 2" transform="translate(1824 991)" fill="none" stroke="rgba(115,215,237,0.4)" stroke-width="1">
+        <circle cx="24" cy="24" r="24" stroke="none"/>
+        <circle cx="24" cy="24" r="23.5" fill="none"/>
+      </g>
+    </g>
+    <g id="social-facebook" transform="translate(45 23)">
+      <rect id="Rectangle_28" data-name="Rectangle 28" width="32" height="32" transform="translate(1787 976)" fill="#69e4ff" opacity="0"/>
+      <path id="Tracé_59" data-name="Tracé 59" d="M15.419,27V16.068h3.687l.548-4.279H15.419V9.064c0-1.235.344-2.08,2.116-2.08H19.78V3.169A29.781,29.781,0,0,0,16.491,3c-3.259,0-5.5,1.989-5.5,5.641v3.14H7.332V16.06H11V27Z" transform="translate(1789.444 977)" fill="#69e4ff"/>
+    </g>
+  </g>
+</svg>

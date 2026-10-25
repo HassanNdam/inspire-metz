@@ -1,0 +1,112 @@
+/*
+|--------------------------------------------------------------------------
+| Mise en page : conteneurs, fonds « nuit », grille et bords biseautés
+|--------------------------------------------------------------------------
+*/
+
+/*
+ * Marges latérales du site en ligne : 1.5rem en mobile, 9.75rem dès 1024px
+ * (156px à 1920px). Pas de largeur max : le rem suit déjà la largeur d'écran.
+ */
+@utility container-site {
+  --gutter: 1.5rem;
+  width: 100%;
+  padding-inline: var(--gutter);
+
+  @variant lg {
+    --gutter: 9.75rem;
+  }
+}
+
+@utility container-content {
+  --gutter: 1.5rem;
+  width: 100%;
+  padding-inline: var(--gutter);
+
+  @variant lg {
+    --gutter: 9.75rem;
+  }
+}
+
+/* Colonne des en-têtes de page et des textes (16rem de marge à 1920px). */
+@utility container-text {
+  --gutter: 1.5rem;
+  width: 100%;
+  padding-inline: var(--gutter);
+
+  @variant lg {
+    --gutter: 16rem;
+  }
+}
+
+/* Colonne des listes (actualités, presse…) : 23rem de marge à 1920px. */
+@utility container-list {
+  --gutter: 1.5rem;
+  width: 100%;
+  padding-inline: var(--gutter);
+
+  @variant lg {
+    --gutter: 23.0625rem;
+  }
+}
+
+/* Fond bleu nuit avec halos lumineux (header, hero, footer, sections sombres). */
+@utility bg-night {
+  background-color: var(--color-dark-blue-950);
+  background-image:
+    radial-gradient(55% 45% at 50% 0%, rgb(20 52 113 / 0.85), transparent 75%),
+    radial-gradient(35% 40% at 100% 0%, rgb(46 80 159 / 0.45), transparent 80%),
+    radial-gradient(35% 40% at 0% 15%, rgb(8 41 96 / 0.6), transparent 80%);
+  color: var(--color-white);
+}
+
+/* Grille de 128px visible en filigrane sur toute la maquette. */
+@utility bg-grid {
+  --grid-line: rgb(15 23 42 / 0.045);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 8rem 8rem;
+}
+
+@utility bg-grid-dark {
+  --grid-line: rgb(255 255 255 / 0.035);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 8rem 8rem;
+}
+
+/* Halo lumineux ponctuel (sous « Nos missions », au-dessus du footer…). */
+@utility glow-spot {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-inline: 20%;
+    bottom: 0;
+    height: 60%;
+    background: radial-gradient(50% 50% at 50% 100%, rgb(115 215 237 / 0.35), transparent 70%);
+    pointer-events: none;
+  }
+}
+
+/*
+ * Bords biseautés : la section suivante « monte » en diagonale.
+ * --slant contrôle la hauteur du biais.
+ */
+@utility edge-slant-t {
+  --slant: clamp(2rem, 5vw, 6rem);
+  clip-path: polygon(0 var(--slant), 100% 0, 100% 100%, 0 100%);
+  margin-top: calc(var(--slant) * -1);
+  padding-top: var(--slant);
+}
+
+@utility edge-slant-b {
+  --slant: clamp(2rem, 5vw, 6rem);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--slant)), 0 100%);
+  padding-bottom: var(--slant);
+}

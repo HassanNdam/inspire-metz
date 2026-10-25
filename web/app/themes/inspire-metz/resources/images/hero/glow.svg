@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.439" height="43.353" viewBox="0 0 230.439 43.353">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2e509f"/>
+      <stop offset="1" stop-color="#2e509f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#52c6e2"/>
+      <stop offset="1" stop-color="#52c6e2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="light" transform="translate(-325 -1562.648)" style="mix-blend-mode: screen;isolation: isolate">
+    <ellipse id="Ellipse_26" data-name="Ellipse 26" cx="109.22" cy="15.676" rx="109.22" ry="15.676" transform="translate(331 1568.648)" fill="url(#radial-gradient)"/>
+    <ellipse id="Ellipse_25" data-name="Ellipse 25" cx="56.539" cy="8.031" rx="56.539" ry="8.031" transform="translate(383.68 1576.456)" fill="url(#radial-gradient-2)"/>
+    <ellipse id="Ellipse_24" data-name="Ellipse 24" cx="31.038" cy="4.409" rx="31.038" ry="4.409" transform="translate(409.182 1580.078)" fill="url(#radial-gradient-3)"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Ellipse_2">
+      <feOffset dx="1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#73d7ed" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="X" transform="translate(-1824 -991)">
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 1824, 991)" filter="url(#Ellipse_2)">
+        <circle id="Ellipse_2-2" data-name="Ellipse 2" cx="24" cy="24" r="24" fill="#fff"/>
+      </g>
+      <g id="Ellipse_2-3" data-name="Ellipse 2" transform="translate(1824 991)" fill="none" stroke="rgba(115,215,237,0.4)" stroke-width="1">
+        <circle cx="24" cy="24" r="24" stroke="none"/>
+        <circle cx="24" cy="24" r="23.5" fill="none"/>
+      </g>
+    </g>
+    <g id="social-x" transform="translate(644 669)">
+      <rect id="Rectangle_26" data-name="Rectangle 26" width="32" height="32" transform="translate(1188 330)" fill="none" opacity="0"/>
+      <path id="Tracé_58" data-name="Tracé 58" d="M23.681,12.685h0l-.875-1.252L15.84,1.47h3L24.46,9.51l.875,1.252,7.307,10.452h-3ZM32.641,0,25.487,8.315,19.774,0h-6.59l8.64,12.574-8.64,10.043h1.952l7.554-8.781,6.034,8.781h6.59l-8.96-13.04h0L34.593,0Z" transform="translate(1179.75 334.692)" fill="#69e4ff"/>
+    </g>
+  </g>
+</svg>
