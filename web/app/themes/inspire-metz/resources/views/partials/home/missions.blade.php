@@ -24,9 +24,9 @@
     @endif
 
     @if ($missions)
-      <h2 id="missions-title" class="missions-title mt-20 lg:mt-24">{{ $home['missions_titre'] ?? __('Nos missions', 'inspire-metz') }}</h2>
+      <h2 id="missions-title" class="missions-title mt-20 lg:mt-16">{{ $home['missions_titre'] ?? __('Nos missions', 'inspire-metz') }}</h2>
 
-      <ul class="relative grid gap-8 lg:mt-8 lg:grid-cols-3 lg:gap-12">
+      <ul class="relative grid gap-8 lg:mt-24 lg:grid-cols-3 lg:gap-12">
         @foreach ($missions as $index => $mission)
           <li @class(['lg:-translate-y-[5.625rem]' => $index === 1])>
             <button type="button" class="mission-card group" x-on:click="$store.ui.openMission(@js($mission['id']))">
